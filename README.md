@@ -23,8 +23,9 @@ Process for evaluation of our analysis documents:
    
 6. Evaluate the relationships between tables and variables to establish query interests and parameters
 7. Open up the file "crowdfunding_db_schema.sql" [located in MAIN] to analyze crowdfunding data (query) PgAdmin
-8. Run the code lines 1 - 48, which will create the tables
-9. Note that tables are created in the following order: Category --> Subcategory --> Contacts --> Campaign 
-10. Refresh the tables tab
-11. Load csv files into their corresponding tables (in the order stated above due to the existence of constraints/dependencies) [category.csv into table Category, subcategory.csv into table Subcategory, contacts.csv into table Contacts, campaign.csv into table Campaign] 
-12. Please query as desired. In our code, we have test queries where we select all from the tables. Please run each query separately.
+8. Run the code lines 1 - 28 first, which will create the supporting tables
+9. After successful creation of those tables, run lines 29 - 48 to create the final table (which includes foreign keys dependent on the previous tables)
+10. Note that tables are created in the following order: Category --> Subcategory --> Contacts --> Campaign 
+11. Refresh the tables tab
+12. Load csv files into their corresponding tables (in the order stated above due to the existence of constraints/dependencies) [category.csv into table Category, subcategory.csv into table Subcategory, contacts.csv into table Contacts, campaign.csv into table Campaign] 
+13. Please query as desired. In our code, we have test queries where we select all from the tables. Please run each query separately.
